@@ -8,21 +8,21 @@
         "project": {
             "id": "7fed02e4-922b-4562-9768-104e56cd8c4d"
         },
-        "timezone": "Asia\/Aden",
+        "timezone": "Asia\/Kolkata",
         "launchOrder": "simultaneous",
         "variables": []
     },
     "roles": [
         {
-            "alias": "apache24-ubuntu1604-hvm",
+            "alias": "base-ubuntu1604-hvm",
             "role": {
-                "name": "apache24-ubuntu1604-hvm"
+                "name": "base-ubuntu1604-hvm"
             },
             "cloudPlatform": "ec2",
             "cloudLocation": "us-east-1",
             "availabilityZones": [],
             "instanceType": {
-                "id": "t2.micro"
+                "id": "m3.medium"
             },
             "launchIndex": 0,
             "advancedConfiguration": {
