@@ -31,10 +31,12 @@
                 "rebootAfterHostInit": false
             },
             "scaling": {
+                "considerSuspendedServers": "running",
                 "enabled": true,
                 "maxInstances": 2,
                 "minInstances": 1,
-                "rules": []
+                "rules": [],
+                "scalingBehavior": "launch-terminate"
             },
             "cloudFeatures": {
                 "type": "AwsCloudFeatures",
@@ -52,7 +54,33 @@
             },
             "variables": [],
             "orchestration": {
-                "rules": []
+                "rules": [
+                    {
+                        "trigger": {
+                            "event": {
+                                "id": "HostInit"
+                            },
+                            "triggerType": "SpecificEventTrigger"
+                        },
+                        "target": {
+                            "targetType": "TriggeringServerTarget"
+                        },
+                        "action": {
+                            "actionType": "ScalrScriptAction",
+                            "scriptVersion": {
+                                "script": {
+                                    "name": "Scalr_cicdscript"
+                                },
+                                "version": -1
+                            }
+                        },
+                        "timeout": 180,
+                        "runAs": "",
+                        "order": 10,
+                        "blocking": true,
+                        "enabled": true
+                    }
+                ]
             },
             "storage": []
         }
