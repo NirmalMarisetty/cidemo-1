@@ -22,7 +22,7 @@
             "cloudLocation": "us-east-1",
             "availabilityZones": [],
             "instanceType": {
-                "id": "m3.medium"
+                "id": "t2.micro"
             },
             "launchIndex": 0,
             "advancedConfiguration": {
