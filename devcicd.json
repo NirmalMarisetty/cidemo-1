@@ -14,9 +14,9 @@
     },
     "roles": [
         {
-            "alias": "base-ubuntu1604-hvm",
+            "alias": "base-centos7",
             "role": {
-                "name": "base-ubuntu1604-hvm"
+                "name": "base-centos7"
             },
             "cloudPlatform": "ec2",
             "cloudLocation": "us-east-1",
@@ -33,7 +33,7 @@
             "scaling": {
                 "considerSuspendedServers": "running",
                 "enabled": true,
-                "maxInstances": 2,
+                "maxInstances": 1,
                 "minInstances": 1,
                 "rules": [],
                 "scalingBehavior": "launch-terminate"
